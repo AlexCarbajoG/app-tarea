@@ -1,0 +1,19 @@
+<h1>Pregunta 1</h1>
+<hr/>
+<div class="container">
+  <h1>Calculadora de Salario Semanal</h1>
+  <form [formGroup]="salarioForm" (ngSubmit)="calcularSalario()">
+    <div class="form-group">
+      <label for="horas">Horas trabajadas:</label>
+      <input type="number" id="horas" formControlName="horasTrabajadas" class="form-control" required>
+      <div *ngIf="salarioForm.get('horasTrabajadas')?.invalid && salarioForm.get('horasTrabajadas')?.touched" class="text-danger">
+        Las horas trabajadas son requeridas y deben ser un número positivo.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="salarioForm.invalid">Calcular Salario</button>
+  </form>
+
+  <div *ngIf="salario !== null">
+    <h2>Salario semanal: ${{ salario }}</h2>
+  </div>
+</div>
