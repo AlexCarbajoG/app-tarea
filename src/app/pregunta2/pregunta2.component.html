@@ -1,0 +1,24 @@
+<h1>Cálculo de Promedio de Prácticas</h1>
+
+<div>
+<label for="nota1">Nota 1:</label>
+<input type="number" [(ngModel)]="notas[0]" id="nota1" />
+</div>
+<div>
+<label for="nota2">Nota 2:</label>
+<input type="number" [(ngModel)]="notas[1]" id="nota2" />
+</div>
+<div>
+<label for="nota3">Nota 3:</label>
+<input type="number" [(ngModel)]="notas[2]" id="nota3" />
+</div>
+<div>
+<label for="nota4">Nota 4:</label>
+<input type="number" [(ngModel)]="notas[3]" id="nota4" />
+</div>
+<button (click)="calcularPromedio()">Calcular Promedio</button>
+
+<div *ngIf="promedio !== null">
+<p>Nota eliminada: {{ notaEliminada }}</p>
+<p>Promedio: {{ promedio }}</p>
+</div>

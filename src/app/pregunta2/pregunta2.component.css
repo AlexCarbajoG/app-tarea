@@ -1,0 +1,13 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.results {
+    margin-top: 20px;
+}
