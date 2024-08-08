@@ -16,7 +16,7 @@ export class Pregunta2Component {
 
   calcularPromedio() {
     const notasValidas = this.notas.filter(nota => !isNaN(nota));
-    
+
     if (notasValidas.length < 4) {
       alert('Por favor, ingresa cuatro notas válidas.');
       return;

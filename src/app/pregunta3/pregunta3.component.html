@@ -1,0 +1,7 @@
+<h1 class="display-4">Conversor de Segundos a Minutos</h1>
+  <div class="mb-3">
+    <label for="segundos" class="form-label">Segundos</label>
+    <input type="number" [(ngModel)]="segundos" class="form-control" id="segundos" placeholder="ingrese el tiempo en segundos">
+    <button class="btn btn-primary" (click)="convertirSegundosAMinutos()">Convertir a minutos</button>
+    <p>Minutos: {{ minutos }}</p>
+  </div>
